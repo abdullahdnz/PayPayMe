@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace PayPayMe.DataAccess.Concrete
 {
-    public class AppDbContext : IdentityDbContext
+    public class AppDbContext : IdentityDbContext<AppUser, AppRole, int>
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
