@@ -21,4 +21,10 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\PayPayMe.Business\PayPayMe.Business.csproj" />
+    <ProjectReference Include="..\PayPayMe.DataAccess\PayPayMe.DataAccess.csproj" />
+    <ProjectReference Include="..\PayPayMe.Entity\PayPayMe.Entity.csproj" />
+  </ItemGroup>
+
 </Project>
