@@ -62,6 +62,7 @@ namespace PayPayMe.Presentation.Controllers
                     client.Send(mimeMessage);
                     client.Disconnect(true);
 
+                    TempData["Mail"] = appUserRegisterDTO.Email;
 
                     return RedirectToAction("Index", "ConfirmMail");
                 }
