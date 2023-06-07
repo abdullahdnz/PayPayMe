@@ -25,12 +25,17 @@ namespace PayPayMe.Presentation.Controllers
         {
             if (ModelState.IsValid)
             {
+                Random random = new Random();
                 AppUser appUser = new AppUser()
                 {
                     Name = appUserRegisterDTO.Name,
                     Surname = appUserRegisterDTO.Lastname,
                     UserName = appUserRegisterDTO.Username,
-                    Email = appUserRegisterDTO.Email
+                    Email = appUserRegisterDTO.Email,
+                    City = "Eskişehir",
+                    District = "Odunpazarı",
+                    ImageURL = "aaaaa",
+                    ConfirmCode = random.Next(100000, 1000000)
                 };
                 var value = await _userManager.CreateAsync(appUser, appUserRegisterDTO.Password);
                 if (value.Succeeded)
